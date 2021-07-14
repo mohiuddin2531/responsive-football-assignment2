@@ -1,0 +1,379 @@
+/*--------------------------
+COMMON STYLES
+-----------------------*/
+body{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*--------------------------
+TOP BANNER STYLES
+-----------------------*/
+.top-banner{
+    height: 550px;
+    background-color: #2D25A0;
+    display: flex;
+    padding: 86px 156px;
+}
+
+.top-banner div{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#intro{
+    flex-direction: column;
+    align-items: flex-start;
+}
+.top-banner img{
+    height: 438px;
+    width: 556.01px;
+    transition: width 1s, height 1s; 
+}
+.top-banner img:hover{
+    height: 538px;
+    width: 656.01px;
+}
+.top-banner h1{
+    font-size: 64px;
+    color: white;
+}
+
+.button{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: 1500;
+    font-size: 15px;
+    background-color: #E02C6D;
+    padding: 20px 40px; 
+    transition: transform 1s ease-out;
+}
+.button:hover{
+    transform: rotate(360deg);
+}
+/*--------------------------
+    PLAYERS SECTION
+-----------------------*/
+.grid-players{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 27px;
+    row-gap: 27px;
+    padding: 70px 200px;
+    justify-items: center;
+}
+.player{
+    padding: 15px 15px 33px 15px;
+    box-shadow: 5px 7px 40px gray;
+    height: 474px;
+    width: 330px;
+}
+.player h3{
+    font-size: 28px;
+}
+.player p{
+    font-size: 16;
+    color: #6C6C6C;
+}
+.player img{
+    height: 256px;
+    width: 100%;
+}
+
+/*--------------------------
+    NEWS SECTION
+-----------------------*/
+.video{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.video div{
+    padding: 20px;
+}
+
+.news{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.articles{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+    padding: 40px;
+}
+
+.text-thumb{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text{
+    padding: 30px;
+}
+
+.text-thumb a{
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    
+}
+.text-thumb div{
+    width: 50%;
+}
+.text-thumb div img{
+    height: 150px;
+    width: 100%;
+}
+
+/*--------------------------
+    FOOTBALL ANIMATION SECTION
+-----------------------*/
+    @keyframes slide {
+        0%{
+            left: 0;
+            top: 0;
+        }
+        25%{
+            top: 200px;
+            transform: scale(0.5);
+        }
+        50%{
+            top: 0;
+            transform: scale(1);
+        }
+        75%{
+            top: 200px;
+            transform: scale(0.5);
+        }
+        100%{
+            left: 92%;
+            top: 0;
+        }
+    }
+
+.ball{
+    height: 300px;
+}
+
+.ball img{
+    height: 200px;
+    position: relative;
+    left: 0;
+    animation: slide 8s ease-in-out 0.5s infinite alternate;
+    animation-play-state: running;
+}
+
+/*--------------------------
+    FOOTER SECTION
+-----------------------*/
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 63px;
+}
+footer img{
+    height: 110px;
+}
+.social-icons{
+    display: flex;
+    justify-content: center;
+}
+.social-icons img{
+    height: 32px;
+    padding: 14px;
+}
+
+/*--------------------------
+    MEDIA QUERIES
+-----------------------*/
+
+/* Mobile Devices */
+
+@media only screen and (max-width:688px) {
+    /* TOP BANNER */
+    .top-banner{
+        flex-direction: column;
+        height: 600px;
+        padding: 16px 61px;
+        align-items: center;
+    }
+    .top-banner img:hover{
+        width: 379px;
+        height: 309.17px;
+    }
+    .top-banner img{
+        width: 329px;
+        height: 259.17px;
+    }
+    .top-banner h1{
+        font-size: 36px;
+    }
+    .top-banner div{
+        width: 100%;
+        padding-bottom: 50px;
+    }
+    
+    /* Grid Players */
+    .grid-players{
+        grid-template-columns: 1fr;
+        justify-content: center;
+        
+    }
+
+    /* NEWS SECTION */
+    .video{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    #mobile{
+        height: 300px;
+        width: 450px;
+    }
+    .articles{
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 30px;
+    }
+    .text{
+        padding: 10px;
+    }
+    .text-thumb a{
+        font-size: 14px;
+    }
+    .text-thumb div{
+        width: 50%;
+    }
+    .text-thumb div img{
+        width: 100%;
+    }
+
+    /* Ball Animation */
+    .ball img{
+        height: 150px;
+    }
+
+    /* Footer */
+    @keyframes slide {
+        0%{
+            left: 0;
+            top: 0;
+        }
+        25%{
+            top: 200px;
+            transform: scale(0.5);
+        }
+        50%{
+            top: 0;
+            transform: scale(1);
+        }
+        75%{
+            top: 200px;
+            transform: scale(0.5);
+        }
+        100%{
+            left: 65%;
+            top: 0;
+        }
+    }
+    footer img{
+        height: 63px;
+    }
+}
+
+
+    /* Tablets */
+@media only screen and (max-width:992px) and (min-width: 689px) {
+        /* TOP BANNER */
+        .top-banner{
+            height: 450px;
+            padding: 16px 61px;
+            align-items: center;
+        }
+        .top-banner img{
+            width: 329px;
+            height: 259.17px;
+        }
+        .top-banner h1{
+            font-size: 36px;
+        }
+        .top-banner div{
+            width: 100%;
+            padding-bottom: 50px;
+        }
+    /* Grid Players */
+    .grid-players{
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+    }
+
+    /*--------------------------
+    NEWS SECTION
+-----------------------*/
+    #mobile{
+        height: 300px;
+        width: 450px;
+    }
+    .articles{
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 30px;
+    }
+
+    .text-thumb div img{
+        width: 386px;
+        height: 230px;
+    }
+
+    /* Ball Animation */ 
+    @keyframes slide {
+        0%{
+            left: 0;
+            top: 0;
+        }
+        25%{
+            top: 200px;
+            transform: scale(0.5);
+        }
+        50%{
+            top: 0;
+            transform: scale(1);
+        }
+        75%{
+            top: 200px;
+            transform: scale(0.5);
+        }
+        100%{
+            left: 80%;
+            top: 0;
+        }
+    }
+    footer img{
+        height: 83px;
+    }
+    
+}
+@media only screen and (min-width: 993px){
+    .grid-players{
+        margin: auto;
+        width: 60%;
+    }
+    .news h1{
+        font-size: 45px;
+    }
+    .articles{
+        padding: 30px 70px
+    }
+}
+
